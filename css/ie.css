@@ -1,0 +1,23 @@
+input, textarea { color: #000; }
+.placeholder { color: #aaa; }
+
+
+.about_banner {
+    background: url("../images/about.jpg") center 50px !important;
+
+}
+
+
+
+span.counter {
+    background: url("../images/cart.png") 7px center;
+	background-repeat: no-repeat;
+
+
+}
+
+.btncart.active .counter {
+ background: url("../images/cart.png") 7px -37px;
+ background-repeat: no-repeat;
+
+}

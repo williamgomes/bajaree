@@ -1,0 +1,45 @@
+
+
+#logo {
+    opacity:0 ;
+    -webkit-transform: scale(2, 4);
+    -webkit-transition: all 0.7s ease-in-out 0s;
+    transform: scale(2, 4);
+    transition: all 0.7s ease-in-out 0s;
+}
+
+#logo.active {
+    opacity: 1;
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+}
+
+.portfolioboxNo h1 {
+    opacity: .6;
+    transform: scale(2, 4);
+    transition: all 0.7s ease-in-out 0s;
+    -webkit-transform: scale(2, 4);
+    -webkit-transition: all 0.7s ease-in-out 0s;
+}
+
+.portfoliobox h1.active {
+
+    opacity: 1;
+    transform: scale(1, 1);
+    -webkit-transform: sscale(1, 1);
+}
+
+
+.ganimate {
+    opacity:1;
+    transition: all 0.8s ease 1s;
+    -webkit-transition: all 0.8s ease 1s;
+    -moz-transition: all 0.8s ease 1s;
+}
+
+.ganimateactive {
+    opacity:1;
+    transform:  scale(1, 1);
+    -webkit-transform:  scale(1, 1);
+    -moz-transform:  scale(1, 1);
+}

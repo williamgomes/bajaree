@@ -1,0 +1,59 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^index$ index.php [L]
+RewriteRule ^search$ search.php [L]
+RewriteRule ^my-account$ account.php [L]
+RewriteRule ^update-password$ update-pass.php [L]
+RewriteRule ^my-address-list$ address-list.php [L]
+RewriteRule ^edit-my-account$ edit-account.php [L]
+RewriteRule ^category$ category.php [L]
+RewriteRule ^my-orders$ orders.php [L]
+RewriteRule ^order-details/([0-9]+)$ order-details.php?order_id=$1 [L]
+RewriteRule ^forgot-my-password$ forgot-pass.php [L]
+RewriteRule ^user-signin-signup$ signin-signup.php [L]
+RewriteRule ^change-password$ pass-change.php [L]
+RewriteRule ^thank-you-for-shopping$ thank-you.php [L]
+RewriteRule ^category/([0-9]+)$ category.php?category_id=$1 [L]
+RewriteRule ^category/([0-9]+)/([A-Za-z0-9_\-]+)$ category.php?category_id=$1&category_name=$2 [L]
+
+RewriteRule ^product$ product_details.php [L]
+RewriteRule ^product/([0-9]+)/([A-Za-z0-9_\-]+)$ product_details.php?product_id=$1&product_name=$2 [L,QSA]
+RewriteRule ^product/([0-9]+)/([A-Za-z0-9_\-]+)/([A-Za-z0-9_\-]+)$ product_details.php?product_id=$1&product_name=$2&secure_code=$3 [L]
+RewriteRule ^verify-account$ verify-account.php [L]
+RewriteRule ^my-wishlist$ wishlist.php [L]
+RewriteRule ^my-cart$ cart.php [L]
+RewriteRule ^checkout-step-1$ checkout1.php [L]
+RewriteRule ^checkout-step-2/([0-9]+)/([0-9]+)$ checkout2.php?shipping=$1&billing=$2 [L]
+RewriteRule ^checkout-step-3/([0-9]+)/([0-9]+)/([0-9]+)/([A-Za-z0-9_\-=]+)$ checkout3.php?shipping=$1&billing=$2&payment=$3&express=$4 [L]
+RewriteRule ^search/([A-Za-z0-9_\-]+)$ search.php?key=$1 [L]
+RewriteRule ^edit-address/([0-9]+)$ address-edit.php?edit_id=$1 [L]
+RewriteRule ^edit-address/([0-9]+)/([A-Za-z0-9_\-=]+)$ address-edit.php?edit_id=$1&type=$2 [L]
+
+RewriteRule ^account$ account.php [L]
+RewriteRule ^news_latter$ news_latter.php [L]
+RewriteRule ^terms-of-use$ condition.php [L]
+RewriteRule ^contact-us$ contact.php [L]
+RewriteRule ^privacy-policy$ privacy.php [L]
+RewriteRule ^how-it-works$ how_it_works.php [L]
+RewriteRule ^faq$ faq.php [L]
+RewriteRule ^customer-support$ support.php [L]
+RewriteRule ^corporate-account$ corporate.php [L]
+
+RewriteRule ^error$ 404.php [L]
+
+
+
+</IfModule>
+
+#cache code from http://www.askapache.com/htaccess/speed-up-sites-with-htaccess-caching.html 
+<ifModule mod_headers.c>
+# WEEK
+<FilesMatch "\.(ico|gif|jpg|jpeg|png|pdf)$">
+# Header set Cache-Control "max-age=604800"
+</FilesMatch>
+# WEEK
+<FilesMatch "\.(js|css|swf)$">
+ # Header set Cache-Control "max-age=604800"
+</FilesMatch>
+</ifModule>

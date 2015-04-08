@@ -1,0 +1,66 @@
+/*!
+ * Yamm!
+ * Yet another megamenu for Bootstrap
+ * http://geedmo.github.com/megamenu
+ *
+ * https://github.com/geedmo
+ */
+.megamenu .nav,
+.megamenu .dropup,
+.megamenu .dropdown,
+.megamenu .collapse {
+    position: static;
+}
+.megamenu .navbar-inner,
+.megamenu .container {
+    position: relative;
+}
+.megamenu .dropdown-menu {
+    left: auto;
+}
+.megamenu .dropdown-menu > li {
+    display: block;
+}
+.megamenu .nav.pull-right .dropdown-menu {
+    right: 0;
+}
+.megamenu .megamenu-content {
+    padding: 20px 30px;
+    *zoom: 1;
+}
+.megamenu .megamenu-content:before,
+.megamenu .megamenu-content:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.megamenu .megamenu-content:after {
+    clear: both;
+}
+.megamenu.navbar .nav > li > .dropdown-menu:after,
+.megamenu.navbar .nav > li > .dropdown-menu:before {
+    display: none;
+}
+.megamenu .dropdown.megamenu-fullwidth .dropdown-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.megamenu .dropdown.megamenu-80width .dropdown-menu {
+    width: 80%;
+    left: 0;
+    right: 0;
+}
+@media (max-width: 969px) {
+    .megamenu .dropdown.megamenu-fullwidth .dropdown-menu {
+        width: auto;
+    }
+    .megamenu .megamenu-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .megamenu .dropdown-menu > li > ul {
+        display: block;
+    }
+}

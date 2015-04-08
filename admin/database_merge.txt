@@ -1,0 +1,25 @@
+products:
+product_categories: 
+product_inventories: 
+product_images: 
+product_sizes: 
+product_inventory_log: 
+
+products:
+UPDATE products SET `product_id`=`product_id`+2000
+UPDATE products SET `product_default_inventory_id` = `product_default_inventory_id`+2000
+product_categories: 
+UPDATE product_categories SET `PC_product_id`=`PC_product_id`+2000
+UPDATE product_categories SET `PC_id`= `PC_id`+2000
+product_inventories: 
+UPDATE product_inventories SET `PI_product_id`=`PI_product_id`+2000
+UPDATE product_inventories SET `PI_id` = `PI_id`+2000
+product_images: 
+UPDATE product_images SET `PI_product_id`=`PI_product_id`+2000
+UPDATE product_images SET `PI_id`=`PI_id`+2000, `PI_inventory_id`=`PI_inventory_id`+2000
+product_sizes: 
+UPDATE product_sizes SET `PS_product_id`= `PS_product_id`+2000
+UPDATE product_sizes SET `PS_id`= `PS_id`+2000
+product_inventory_log: 
+UPDATE product_inventory_log SET `PIL_id`=`PIL_id`+2000, `PIL_PI_id`=`PIL_PI_id`+2000
+===================================================================
